@@ -10,7 +10,7 @@ body {
 }
 
 img {
-	max-width: 100%;
+	max-width: 50%;
 } 
 
 /* ----------------------------------------
@@ -53,6 +53,7 @@ Lists
 ------------------------------------------- */
 ul a {
 	text-transform: none;
+	padding: 0;
 }
 
 li {
@@ -65,12 +66,52 @@ li {
 Layout
 ------------------------------------------- */
 
+.landing-container, .about-container, .projects-container,
+.testimonials-container, .contact-container {
+	border: red solid 1px;
+	height: 100vmin;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.landing-container {
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+footer {
+	border: red solid 1px;
+	display: flex;
+	flex-wrap: wrap;
+}
 
 /* ----------------------------------------
 Header
 ------------------------------------------- */
 
 
+.upright-triangle {
+	z-index: -10;
+	width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 300px solid #00549986;
+	position: absolute;
+	margin-top:-30px;
+}
+
+.landing-container h1 {
+	position: relative;
+	color: blue;
+}
+
+.landing-container h2 {
+	position: relative;
+	/* color: green; */
+}
 
 /* ----------------------------------------
 Buttons
