@@ -6,12 +6,8 @@ Base Styles
 }
 
 body {
-	background: WAVEFORM
+	background: darkgray;
 }
-
-img {
-	max-width: 50%;
-} 
 
 /* ----------------------------------------
 Typography
@@ -61,24 +57,58 @@ li {
 	text-align: left;
 }
 
+.skill-tree {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0;
+}
+
 
 /* ----------------------------------------
 Layout
 ------------------------------------------- */
 
-.landing-container, .about-container, .projects-container,
-.testimonials-container, .contact-container {
+.landing-container {
 	border: red solid 1px;
 	height: 100vmin;
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.landing-container {
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+}
+
+.about-container, .projects-container {
+	border: red solid 1px;
+	height: 100vmin;
+	text-align: center;
+}
+
+.about-content-container {
+	height: 70vmin;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	text-align: center;
+	margin: 5% 60px;
+}
+
+.about-text-container h3 {
+	margin-top: 0px;
+}
+
+.projects-content-container {
+	height: 70vmin;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	margin: 5% 60px;
 }
 
 footer {
@@ -91,7 +121,6 @@ footer {
 Header
 ------------------------------------------- */
 
-
 .upright-triangle {
 	z-index: -10;
 	width: 0;
@@ -100,7 +129,7 @@ Header
 	border-right: 150px solid transparent;
 	border-bottom: 300px solid #00549986;
 	position: absolute;
-	margin-top:-30px;
+	margin-top:-25px;
 }
 
 .landing-container h1 {
@@ -110,26 +139,32 @@ Header
 
 .landing-container h2 {
 	position: relative;
-	/* color: green; */
 }
+
+/* ----------------------------------------
+About
+------------------------------------------- */
+.about-content-container img {
+	max-width: 40%;
+	max-height: 300px;
+	position: center;
+} 
 
 /* ----------------------------------------
 Buttons
 ------------------------------------------- */
 
 
-/* ----------------------------------------
-About
-------------------------------------------- */
-
-
-
 
 /* ----------------------------------------
-Gallery
+Projects
 ------------------------------------------- */
 
-
+.projects-content-container img {
+	max-width: 100%;
+	max-height: 300px;
+	position: center;
+} 
 
 
 
@@ -151,7 +186,9 @@ Footer
 Error Styles
 ------------------------------------------- */
 
-
+.error-message {
+	display: none;
+}
 
 
 /* ----------------------------------------
