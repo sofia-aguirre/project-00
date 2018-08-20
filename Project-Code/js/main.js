@@ -21,33 +21,51 @@ function callModal () {
 callModal();
 //end of modal ---------------------
 
+//form validation ------------------
+function formVal () {
+$('.form-content-container').on('submit', function (event) { 
+        event.preventDefault();
+        $('form input').each(function () {
+            if ($(this).val() == false) {
+                $(this).addClass('error');
+                $(this).siblings('.error-message').fadeIn(600);
+            } else {
+                $(this).removeClass('error');
+                $(this).siblings('.error-message').fadeOut(600);
+            }
+        });
 
-//Sticky nav bar when scroll reaches About Me section
-//ADD ONCE you have the function of smooth scroll to #aboutme and THEN onclick, do the following:
-// window.onscroll = function() {stickyNav()};
+        $('form textarea').each(function () {
+            if ($(this).val() == false) {
+                $(this).addClass('error');
+                $(this).siblings('.error-message').fadeIn(600);
+            } else {
+                $(this).removeClass('error');
+                $(this).siblings('.error-message').fadeOut(600);
+            }
+        });
+    })
+}
 
-// var navbar = document.getElementsByTagName("nav");
-// var sticky = navbar.offsetTop;
+formVal();
+//end of form validation --------------------------
 
-// function stickyNav() {
-//     if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//     } else {
-//     navbar.classList.remove("sticky");
-//     }
-// }
+//nav bar smoothscrolling
+//shelved the horizontal one for now
+
+function smoothScoll () {
+    let anchorlinks = document.querySelectorAll('a[href^="#"]');
+    for (anchorlinks) {
+        item.addEvent/addEventListener('click', (e) => {
 
 
-//OR!!! 
-// $(window).scroll(function () { 
+        })
+    }
+}
 
-//     console.log($(window).scrollTop());
+smoothScoll();
 
-//     if ($(window).scrollTop() > 550) {
-//       $('nav').addClass('sticky');
-//     }
 
-//     if ($(window).scrollTop() < 551) {
-//       $('nav').removeClass('sticky');
-//     }
-//   });
+$('nav, ul, li').each.on('click', function() {
+    $(this).addClass('underline');
+})
